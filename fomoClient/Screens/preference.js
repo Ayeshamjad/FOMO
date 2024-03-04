@@ -99,6 +99,7 @@ const Preference = () => {
 
 const styles = StyleSheet.create({
   container: {
+    fontFamily: 'Poppins',
     flex: 1,
     padding: 20,
   },

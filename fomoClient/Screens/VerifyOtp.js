@@ -105,9 +105,10 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         textAlign: 'center',
         marginTop: 20,
+        fontFamily: 'Poppins',
     },
     inputContainer: {
-        marginHorizontal: 30,
+        marginHorizontal: 25,
         marginBottom: 15,
         padding: 20,
         textAlign: 'center',
@@ -118,6 +119,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         marginBottom: 15,
+        fontFamily: 'Poppins',
     },
     signInButton: {
         backgroundColor: '#FF4459',

@@ -1,15 +1,17 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet,TouchableOpacity} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import NavBar from '../components/navbar';
 
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Home Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      {/* Your main content goes here */}
+      <Text>Main Content</Text>
+
+      {/* Include the Navbar component */}
+      <NavBar />
     </View>
   );
 }

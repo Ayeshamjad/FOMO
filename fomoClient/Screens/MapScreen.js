@@ -59,6 +59,7 @@ const MapScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    fontFamily: 'Poppins',
   },
   map: {
     flex: 1,

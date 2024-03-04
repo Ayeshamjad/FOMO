@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const ProfileSuccessRegistered = ({ navigation }) => {
   const handleContinuePress = () => {
-    navigation.navigate('profileLocation');
+    navigation.navigate('home');
   };
 
   return (

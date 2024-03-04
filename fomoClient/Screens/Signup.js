@@ -44,7 +44,7 @@ const Signup = () => {
                 <Text style={styles.heading}>Create New Account</Text>
             </View>
             <View style={styles.inputContainer}>
-            <View style={styles.inputWrapper}>
+                <View style={styles.inputWrapper}>
                     <Ionicons name="person-outline" size={24} color="#666666" />
                     <TextInput
                         style={styles.input}
@@ -146,6 +146,7 @@ const styles = StyleSheet.create({
         fontWeight: '400',
         textAlign: 'left',
         color: '#666666',
+        fontFamily: 'Poppins',
     },
     forgotPassword: {
         fontSize: 16,
@@ -154,6 +155,7 @@ const styles = StyleSheet.create({
         margin: 8,
         color: '#FF4459',
         textDecorationLine: 'underline',
+
     },
     signInButton: {
         backgroundColor: '#FF4459',
@@ -181,6 +183,7 @@ const styles = StyleSheet.create({
     orText: {
         marginHorizontal: 10,
         color: '#C7C7C7',
+        fontFamily: 'Poppins',
     },
     socialButtonsContainer: {
         flexDirection: 'row',

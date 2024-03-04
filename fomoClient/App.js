@@ -15,14 +15,25 @@ import profileLocation from './Screens/profileLocation';
 import Sucess from './Screens/profileSucessRegistered';
 import Preference from './Screens/preference';
 import MapScreen from './Screens/MapScreen';
+import home from './Screens/HomeScreen';
+import NotificationScreen from './Screens/NotificationScreen';
 
 
 const Stack = createStackNavigator();
 
 const App = () => {
+  const [loaded] = useFonts({
+    'Poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+    'Poppins-Bold': require('./assets/fonts/Poppins-Bold.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="OnBoardingV1" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="NotificationScreen" screenOptions={{ headerShown: false }}>
         {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Signup" component={Signup} />
@@ -35,6 +46,8 @@ const App = () => {
         <Stack.Screen name="Sucess" component={Sucess} />
         <Stack.Screen name="Preference" component={Preference} />
         <Stack.Screen name="MapScreen" component={MapScreen} />
+        <Stack.Screen name="home" component={home} />
+        <Stack.Screen name="NotificationScreen" component={NotificationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

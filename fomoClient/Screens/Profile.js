@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 20,
         paddingVertical: 20,
+        fontFamily: 'Poppins',
     },
     topContainer: {
         alignItems: 'center',
@@ -177,6 +178,7 @@ const styles = StyleSheet.create({
         fontWeight: '400',
         textAlign: 'left',
         color: '#666666',
+        fontFamily: 'Poppins',
     },
     signInButton: {
         backgroundColor: '#FF4459',

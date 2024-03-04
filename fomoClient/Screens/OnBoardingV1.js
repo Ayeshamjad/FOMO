@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#202231',
+        fontFamily: 'Poppins',
     },
     topSection: {
         flex: 1,
