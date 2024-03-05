@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const NotificationScreen = () => {
+const NotificationScreen = ({navigation}) => {
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('Home');
     };
     return (
         <View style={styles.container}>

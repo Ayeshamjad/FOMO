@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingVi
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-const confirmPass = () => {
+const ConfirmPass = () => {
     const navigation = useNavigation();
     const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmPassword] = useState('');
@@ -64,7 +64,7 @@ const confirmPass = () => {
     )
 }
 
-export default confirmPass
+export default ConfirmPass;
 
 const styles = StyleSheet.create({
     container: {
