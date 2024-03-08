@@ -86,8 +86,10 @@ import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { SvgXml } from 'react-native-svg';
+import { useNavigation } from '@react-navigation/native';
 
 const NavBar = () => {
+  const navigation = useNavigation();
     const balloon = `<svg width="50" height="94" viewBox="0 0 50 94" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_532_941)">
     <path d="M20.9748 103.94C21.2608 102.887 23.4295 94.9175 24.1445 90.7771C24.4543 88.9582 25.1216 85.1529 24.5973 80.486C24.2398 77.4226 23.5725 75.6995 22.9767 74.1917C22.3809 72.66 21.8566 71.3198 21.8089 69.094C21.7374 65.528 23.0244 61.8424 25.5744 58.1567L26.3371 58.6833C23.8823 62.2014 22.6669 65.6956 22.7384 69.0701C22.7861 71.1283 23.2627 72.3728 23.8347 73.8327C24.4543 75.4123 25.1454 77.1833 25.5029 80.3663C26.0511 85.1529 25.3599 89.0539 25.0263 90.9207C24.216 95.5158 21.8566 104.108 21.8328 104.179C21.5944 105.137 20.7842 104.658 20.9748 103.94Z" fill="#FF4459"/>
@@ -112,27 +114,46 @@ const NavBar = () => {
     </defs>
     </svg>
     `
+    const handleHomePress = () => {
+      navigation.navigate('home');
+    };
+  
+    const handleEventsPress = () => {
+      navigation.navigate('events');
+    };
+  
+     const handleAddPress = () => {
+      navigation.navigate('Organise');
+    };
+    const handleChatPress = () => {
+      // Logic for handling Chat press
+      navigation.navigate('Chat');
+    };
+  
+    const handleProfilePress = () => {
+      // Logic for handling Profile press
+    };
 
   return (
-    <View style={[styles.navbar, Platform.OS === 'ios' ? styles.shadowIOS : styles.shadowAndroid]}>
-      <TouchableOpacity style={styles.iconContainer}>
+<View style={[styles.navbar, Platform.OS === 'ios' ? styles.shadowIOS : styles.shadowAndroid]}>
+      <TouchableOpacity style={styles.iconContainer} onPress={handleHomePress}>
         <FontAwesome5 name="home" size={24} color="gray" />
         <Text style={styles.label}>Home</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity style={styles.iconContainer} onPress={handleEventsPress}>
         <FontAwesome5 name="calendar-alt" size={24} color="gray" />
         <Text style={styles.label}>Events</Text>
       </TouchableOpacity>
       <TouchableOpacity>
-      <View style={styles.balloonContainer}>
-        <SvgXml xml={balloon} width={50} height={90} />
+      <View style={styles.balloonContainer} onPress={handleAddPress}>
+        <SvgXml xml={balloon} width={50} height={90}onPress={handleAddPress} />
       </View>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity style={styles.iconContainer} onPress={handleChatPress}>
         <FontAwesome5 name="comments" size={24} color="gray" />
         <Text style={styles.label}>Chat</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.iconContainer}>
+      <TouchableOpacity style={styles.iconContainer} onPress={handleProfilePress}>
         <FontAwesome5 name="user" size={24} color="gray" />
         <Text style={styles.label}>Profile</Text>
       </TouchableOpacity>

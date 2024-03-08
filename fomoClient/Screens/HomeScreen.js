@@ -63,7 +63,7 @@ const HomeScreen = ({ navigation }) => {
 
 
   return (
-    <View style={{ flex: 1}}>
+    <View style={{ flex: 1 ,  backgroundColor: 'white'}}>
       <View style={{display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center', marginTop:50, paddingHorizontal:20}}>
         <Text style={{fontFamily:'Poppins-Medium', fontSize:18}}>HOME</Text>
         <SvgXml xml={notificationIcon} width={25} height={25} onPress={handleNotifications}/>

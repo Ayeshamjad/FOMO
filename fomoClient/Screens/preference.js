@@ -14,7 +14,7 @@ const Preference = () => {
   };
 
   const handleContinuePress = () => {
-    navigation.navigate('VerifyOtp');
+    navigation.navigate('Sucess');
   };
 
   return (
