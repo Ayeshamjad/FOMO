@@ -9,7 +9,7 @@ import { Picker } from '@react-native-picker/picker';
 const addCard = () => {
     const handleContinuePress = () => {
         // Navigate to the map screen
-        navigation.navigate('organise2');
+        navigation.navigate('reviewSummary');
     };
     const navigation = useNavigation();
     const handleBackPress = () => {

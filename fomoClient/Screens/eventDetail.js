@@ -12,7 +12,7 @@ const EventDetail = () => {
     };
 
     const handleChatPress = () => {
-        // Implement chat functionality here
+        navigation.navigate('pChat');
     };
 
     const handleBuyTicketPress = () => {

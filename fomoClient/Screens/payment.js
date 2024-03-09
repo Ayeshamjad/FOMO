@@ -13,7 +13,7 @@ const Payment = () => {
     };
 
     const handleContinuePress = () => {
-        navigation.navigate('organise2');
+        navigation.navigate('reviewSummary');
     };
     const handleAddCardPress = () => {
         navigation.navigate('addCard');

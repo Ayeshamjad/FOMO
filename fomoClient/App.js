@@ -25,6 +25,7 @@ import Organise from './Screens/Organise';
 import organise2 from './Screens/organise2';
 import payment from './Screens/payment';
 import addCard from './Screens/addCard';
+import reviewSummary from './Screens/reviewSummary';
 
 const Stack = createStackNavigator();
 
@@ -65,6 +66,7 @@ const App = () => {
         <Stack.Screen name="organise2" component={organise2} />
         <Stack.Screen name="payment" component={payment} />
         <Stack.Screen name="addCard" component={addCard} />
+        <Stack.Screen name="reviewSummary" component={reviewSummary} />
       </Stack.Navigator>
     </NavigationContainer>
   );

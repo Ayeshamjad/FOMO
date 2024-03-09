@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     elevation: 2,
+    
+    
   },
   profilePhoto: {
     width: 30,
