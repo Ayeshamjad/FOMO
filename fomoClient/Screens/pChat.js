@@ -64,13 +64,25 @@ export default pChat;
 const styles = StyleSheet.create({
   messageContainer: {
     maxWidth: '70%',
-    borderRadius: 22,
+    borderTopLeftRadius: 22,
+    borderTopRightRadius: 22,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 22,
     padding: 18,
     flexDirection: 'row',
     alignItems: 'center',
     elevation: 2,
-    
-    
+  },
+  messageContainer2: {
+    maxWidth: '70%',
+    borderTopLeftRadius: 22,
+    borderTopRightRadius: 22,
+    borderBottomLeftRadius: 22,
+    borderBottomRightRadius: 0,
+    padding: 18,
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 2,
   },
   profilePhoto: {
     width: 30,

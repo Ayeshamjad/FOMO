@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, Button, FlatList, StyleSheet, TextInput, ScrollView, TouchableOpacity, Image, value } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { SvgXml } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
 
 const EventDetail = () => {
     const navigation = useNavigation();
+
+    const [activeSlide, setActiveSlide] = useState(0);
 
     const handleBackPress = () => {
         navigation.navigate('home');
@@ -19,6 +22,20 @@ const EventDetail = () => {
         navigation.navigate('payment');
     };
 
+    const images = [
+        { uri: require('../assets/images/events.png')},
+        { uri:require('../assets/images/events.png') },
+        { uri: require('../assets/images/events.png')},
+    ];
+
+    const renderCarouselItem = ({ item, index }) => {
+        return (
+            <View style={{ height: '40%', backgroundColor: 'transparent' }}>
+                <Image source={item} style={{ flex: 1 }} resizeMode="cover" />
+            </View>
+        );
+    };
+
     return (
         <View style={{ flex: 1, backgroundColor: 'white' }}>
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 50, paddingHorizontal: 20 }}>
@@ -26,6 +43,34 @@ const EventDetail = () => {
                     <Ionicons onPress={handleBackPress} name="arrow-back-outline" size={25} color="#666666" />
                     <Text style={{ fontFamily: 'Poppins-Medium', fontSize: 18, marginLeft: 10 }}>EVENT DETAIL</Text>
                 </View>
+            </View>
+
+            {/* Carousel */}
+            <View style={{ height: '40%' }}>
+                <Carousel
+                    data={images}
+                    renderItem={renderCarouselItem}
+                    sliderWidth={500}
+                    itemWidth={300}
+                    onSnapToItem={(index) => setActiveSlide(index)}
+                />
+                <Pagination
+                    dotsLength={images.length}
+                    activeDotIndex={activeSlide}
+                    containerStyle={{ position: 'absolute', bottom: 10, alignSelf: 'center' }}
+                    dotStyle={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: 5,
+                        marginHorizontal: 8,
+                        backgroundColor: 'rgba(0, 0, 0, 0.92)'
+                    }}
+                    inactiveDotStyle={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.3)'
+                    }}
+                    inactiveDotOpacity={0.4}
+                    inactiveDotScale={0.6}
+                />
             </View>
 
             {/* Main content of the screen goes here */}
