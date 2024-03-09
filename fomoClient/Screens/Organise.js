@@ -10,7 +10,7 @@ const Organise = () => {
     const navigation = useNavigation();
     const handleSelectOnMapPress = () => {
         // Navigate to the map screen
-        navigation.navigate('MapScreen');
+        navigation.navigate('OrganiseMap');
     };
     const handleContinuePress = () => {
         // Navigate to the map screen
