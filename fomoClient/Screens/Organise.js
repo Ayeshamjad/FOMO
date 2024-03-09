@@ -7,6 +7,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { Picker } from '@react-native-picker/picker';
 
 const Organise = () => {
+    const navigation = useNavigation();
     const handleSelectOnMapPress = () => {
         // Navigate to the map screen
         navigation.navigate('MapScreen');
@@ -15,7 +16,7 @@ const Organise = () => {
         // Navigate to the map screen
         navigation.navigate('organise2');
     };
-    const navigation = useNavigation();
+    
     const handleBackPress = () => {
         navigation.navigate('home');
     };
