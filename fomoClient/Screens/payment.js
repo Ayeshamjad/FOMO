@@ -9,7 +9,7 @@ const Payment = () => {
     const [selectedOption, setSelectedOption] = useState(null);
 
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('eventDetail');
     };
 
     const handleContinuePress = () => {

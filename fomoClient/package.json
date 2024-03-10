@@ -31,7 +31,8 @@
     "react-native-maps": "^1.10.3",
     "react-native-navigation-bar-color": "^2.0.2",
     "react-native-snap-carousel": "^3.9.1",
-    "react-native-svg": "^15.0.0"
+    "react-native-svg": "^15.0.0",
+    "react-native-web": "~0.19.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

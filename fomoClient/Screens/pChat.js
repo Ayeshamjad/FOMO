@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 const pChat = () => {
   const navigation = useNavigation();
   const handleBackPress = () => {
-    navigation.navigate('home');
+    navigation.navigate('Chat');
   };
 
   // Sample data for chat messages
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     elevation: 2,
+    marginBottom:10,
   },
   profilePhoto: {
     width: 30,

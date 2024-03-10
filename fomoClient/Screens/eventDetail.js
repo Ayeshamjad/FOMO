@@ -8,7 +8,7 @@ const EventDetail = () => {
     const navigation = useNavigation();
 
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('events');
     };
 
     const handleChatPress = () => {

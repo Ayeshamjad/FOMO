@@ -110,56 +110,58 @@ export default function events() {
 
             <Text style={{ fontFamily: 'Poppins', fontSize: 22, fontWeight: '500', lineHeight: 33, letterSpacing: 0, marginTop: 20, marginLeft: 20 }}>Trending</Text>
             <View>
-                <FlatList
-                    data={eventsData}
-                    renderItem={renderItem}
-                    keyExtractor={item => item.id.toString()}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={{ marginTop: 20, paddingHorizontal: 20 }}
-                />
+                <TouchableOpacity onPress={handleEventPress}>
+                    <FlatList
+                        data={eventsData}
+                        renderItem={renderItem}
+                        keyExtractor={item => item.id.toString()}
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        contentContainerStyle={{ marginTop: 20, paddingHorizontal: 20 }}
+                    />
+                </TouchableOpacity>
             </View>
 
 
             <Text style={{ fontFamily: 'Poppins', fontSize: 22, fontWeight: '500', lineHeight: 33, letterSpacing: 0, marginTop: 20, marginLeft: 20 }}>Feed</Text>
 
 
-<View> 
-    
-</View>
-<ScrollView style={{ flex: 1, height: 400, marginTop: 10, marginHorizontal:20 }} showsVerticalScrollIndicator={false}>
-    {eventsData.map(event => (
-        <TouchableOpacity key={event.id} style={styles.eventContainer} onPress={handleEventPress} >
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <View style={{ width: 100, height: 100, borderRadius: 10, overflow: 'hidden', marginRight: 10 }}>
-                    <Image source={event.image} style={{ width: '100%', height: '100%' }} resizeMode="cover" />
-                </View>
-                <View style={{ flex: 1 }}>
-                    <View style={{ flexDirection: 'row', marginVertical: 8}}>
-                        <Text style={{ fontFamily: 'Poppins', fontSize: 16.5, fontWeight: '500'}}>{event.name}</Text>
-                        <Ionicons name="heart-outline" size={22} color="red" style={{ marginLeft: 'auto' }} />
-                    </View>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
-                        <Ionicons name="location-outline" size={18} color="gray" style={{ marginRight: 5 }} />
-                        <Text style={{ fontFamily: 'Poppins', fontSize: 14, color: 'gray', marginRight: 10 }}>{event.location}</Text>
-                        <Ionicons name="time-outline" size={18} color="gray" style={{ marginRight: 5 }} />
-                        <Text style={{ fontFamily: 'Poppins', fontSize: 14, color: 'gray' }}>{event.dateTime}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' , marginBottom: 5 }}>
-                        <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
-                            <Ionicons name="person-circle-outline" size={24} color="gray" style={{ marginRight: -9 }} />
-                            <Ionicons name="person-circle-outline" size={24} color="gray" style={{ marginRight: -9 }} />
-                            <Ionicons name="person-circle-outline" size={24} color="gray" style={{ marginRight: -9 }} />
-                        </View>
-                        <TouchableOpacity style={{ backgroundColor: '#FF6347', paddingVertical: 5, width:100,  height: 33,  paddingHorizontal: 10, borderRadius: 5 }}>
-                            <Text style={{ fontFamily: 'Poppins',textAlign:'center', fontSize: 14, color: 'white' }}>JOIN US</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
+            <View>
+
             </View>
-        </TouchableOpacity>
-    ))}
-</ScrollView>
+            <ScrollView style={{ flex: 1, height: 400, marginTop: 10, marginHorizontal: 20 }} showsVerticalScrollIndicator={false}>
+                {eventsData.map(event => (
+                    <TouchableOpacity key={event.id} style={styles.eventContainer} onPress={handleEventPress} >
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <View style={{ width: 100, height: 100, borderRadius: 10, overflow: 'hidden', marginRight: 10 }}>
+                                <Image source={event.image} style={{ width: '100%', height: '100%' }} resizeMode="cover" />
+                            </View>
+                            <View style={{ flex: 1 }}>
+                                <View style={{ flexDirection: 'row', marginVertical: 8 }}>
+                                    <Text style={{ fontFamily: 'Poppins', fontSize: 16.5, fontWeight: '500' }}>{event.name}</Text>
+                                    <Ionicons name="heart-outline" size={22} color="red" style={{ marginLeft: 'auto' }} />
+                                </View>
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 8 }}>
+                                    <Ionicons name="location-outline" size={18} color="gray" style={{ marginRight: 5 }} />
+                                    <Text style={{ fontFamily: 'Poppins', fontSize: 14, color: 'gray', marginRight: 10 }}>{event.location}</Text>
+                                    <Ionicons name="time-outline" size={18} color="gray" style={{ marginRight: 5 }} />
+                                    <Text style={{ fontFamily: 'Poppins', fontSize: 14, color: 'gray' }}>{event.dateTime}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 5 }}>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
+                                        <Ionicons name="person-circle-outline" size={24} color="gray" style={{ marginRight: -9 }} />
+                                        <Ionicons name="person-circle-outline" size={24} color="gray" style={{ marginRight: -9 }} />
+                                        <Ionicons name="person-circle-outline" size={24} color="gray" style={{ marginRight: -9 }} />
+                                    </View>
+                                    <TouchableOpacity style={{ backgroundColor: '#FF6347', paddingVertical: 5, width: 100, height: 33, paddingHorizontal: 10, borderRadius: 5 }}>
+                                        <Text style={{ fontFamily: 'Poppins', textAlign: 'center', fontSize: 14, color: 'white' }}>JOIN US</Text>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+                        </View>
+                    </TouchableOpacity>
+                ))}
+            </ScrollView>
 
             <NavBar />
         </View>
@@ -168,12 +170,12 @@ export default function events() {
 
 const styles = StyleSheet.create({
     eventContainer: {
-        shadowColor: 'gray', 
+        shadowColor: 'gray',
         shadowOffset: { width: 0, height: 2 },
         marginBottom: 10,
         borderRadius: 15,
         backgroundColor: '#fff',
-        shadowOpacity: 0.5, 
+        shadowOpacity: 0.5,
         elevation: 5,
         padding: 15,
     },

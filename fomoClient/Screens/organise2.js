@@ -7,11 +7,11 @@ import { useNavigation } from '@react-navigation/native';
 const organise2 = () => {
     const handleContinuePress = () => {
         // Navigate to the map screen
-        navigation.navigate('organise2');
+        navigation.navigate('home');
     };
     const navigation = useNavigation();
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('Organise');
     };
 
     // Sample image data
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     image: {
         width: 110,
         height: 110,
-        borderRadius: 2,
+        borderRadius: 5,
         marginHorizontal: 7,
     },
 });

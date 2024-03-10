@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 const reviewSummary = () => {
     const navigation = useNavigation();
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('addCard');
     };
 
     const handleContinuePress = () => {

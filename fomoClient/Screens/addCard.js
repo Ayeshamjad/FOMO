@@ -13,7 +13,7 @@ const addCard = () => {
     };
     const navigation = useNavigation();
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('payment');
     };
 
 

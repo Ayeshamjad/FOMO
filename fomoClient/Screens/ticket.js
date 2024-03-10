@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 const ticket = () => {
     const navigation = useNavigation();
     const handleBackPress = () => {
-        navigation.navigate('home');
+        navigation.navigate('reviewSummary');
     };
 
     const handleContinuePress = () => {
