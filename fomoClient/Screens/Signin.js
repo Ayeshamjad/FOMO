@@ -22,11 +22,9 @@ const Signin = () => {
     };
 
     const handleGoogleSignIn = () => {
-        // Implement Google sign in functionality
     };
 
     const handleAppleSignIn = () => {
-        // Implement Apple sign in functionality
     };
 
     return (

@@ -10,7 +10,6 @@ const pChat = () => {
     navigation.navigate('Chat');
   };
 
-  // Sample data for chat messages
   const messages = [
     { id: 1, text: "Hey, how's it going?", sender: "receiver", time: "10:00 AM", profilePhoto: require('../assets/images/events.png') },
     { id: 2, text: "Hey! Doing good, thanks.", sender: "sender", time: "10:05 AM", profilePhoto: require('../assets/images/event2.png') },
@@ -33,7 +32,7 @@ const pChat = () => {
           <View key={message.id} style={{ alignSelf: message.sender === "sender" ? 'flex-end' : 'flex-start', marginBottom: 10 }}>
             <View style={{ flexDirection: 'row', alignItems: 'flex-end', justifyContent: message.sender === "sender" ? 'flex-end' : 'flex-start' }}>
               {message.sender === "receiver" && <Image source={message.profilePhoto} style={styles.profilePhoto} />}
-              <View style={[styles.messageContainer, { backgroundColor: message.sender === "sender" ? '#FFFFFF' : '#FF4459' }]}>
+              <View style={[styles.messageContainer, { backgroundColor: message.sender === "sender" ? '#FFFFFF' : '#FF4459', marginVertical:10 }]}>
                 <Text style={[styles.messageText, { color: message.sender === "sender" ? '#000000' : '#FFFFFF' }]}>{message.text}</Text>
               </View>
               {message.sender === "sender" && <Image source={message.profilePhoto} style={styles.profilePhoto} />}

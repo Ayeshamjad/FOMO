@@ -219,8 +219,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#FF4459',
         borderRadius: 20,
         padding: 3,
-        bottom: 19, // Adjusted bottom position
-        right: 20, // Adjusted right position
+        bottom: 19, 
+        right: 20, 
     }
     
 });

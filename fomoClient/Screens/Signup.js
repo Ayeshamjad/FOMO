@@ -20,11 +20,9 @@ const Signup = () => {
 
 
     const handleGoogleSignIn = () => {
-        // Implement Google sign in functionality
     };
 
     const handleAppleSignIn = () => {
-        // Implement Apple sign in functionality
     };
     const handleBackPress = () => {
         navigation.navigate('Signin');

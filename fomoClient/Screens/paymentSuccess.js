@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     },
     content: {
       alignItems: 'center',
-      marginBottom: 30, // Add margin at the bottom of the content
+      marginBottom: 30, 
     },
     image: {
       width: 200,

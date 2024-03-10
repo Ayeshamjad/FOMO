@@ -128,7 +128,7 @@ map: {
 },
 locationButton: {
   position: 'absolute',
-  bottom: 115, // Adjust this value to move the location button higher
+  bottom: 115,
   right: 20,
   backgroundColor: 'white',
   borderRadius: 50,

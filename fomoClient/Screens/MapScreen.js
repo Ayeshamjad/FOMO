@@ -80,8 +80,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 12,
     marginVertical: 10,
-    width: '90%', // Set the width to 80% of the screen width
-    alignSelf: 'center', // Center the button horizontally
+    width: '90%', 
+    alignSelf: 'center', 
   },
   signInButtonText: {
     fontFamily: 'Poppins',

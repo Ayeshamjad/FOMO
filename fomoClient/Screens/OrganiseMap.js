@@ -30,7 +30,6 @@ const OrganiseMap = (navigation) => {
     };
 
     const handleSearch = () => {
-        // Handle search logic here
         console.log('Searching for:', searchQuery);
     };
 
@@ -77,19 +76,19 @@ const OrganiseMap = (navigation) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F0F0F0', // Background color
+        backgroundColor: '#F0F0F0', 
     },
     searchBar: {
         flexDirection: 'row',
         paddingHorizontal: 20,
         paddingTop: 15,
         paddingBottom: 10,
-        backgroundColor: 'transparent', // Transparent background for search bar
+        backgroundColor: 'transparent', 
         position: 'absolute',
         top: 39,
         left: 0,
         right: 0,
-        zIndex: 1, // Ensure search bar stays above map
+        zIndex: 1, 
     },
     input: {
         flex: 1,
@@ -106,11 +105,11 @@ const styles = StyleSheet.create({
         top: 58,
         right: 26,
         backgroundColor: '#F0F0F0',
-        zIndex: 1, // Ensure search button stays above map
+        zIndex: 1, 
     },
     locationButton: {
         position: 'absolute',
-        bottom: 115, // Adjust this value to move the location button higher
+        bottom: 115, 
         right: 20,
         backgroundColor: 'white',
         borderRadius: 50,
@@ -124,8 +123,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 12,
         marginVertical: 10,
-        width: '90%', // Set the width to 80% of the screen width
-        alignSelf: 'center', // Center the button horizontally
+        width: '90%', 
+        alignSelf: 'center', 
     },
     signInButtonText: {
         fontFamily: 'Poppins',

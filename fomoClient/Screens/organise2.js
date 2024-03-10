@@ -6,7 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 
 const organise2 = () => {
     const handleContinuePress = () => {
-        // Navigate to the map screen
         navigation.navigate('home');
     };
     const navigation = useNavigation();
@@ -14,7 +13,6 @@ const organise2 = () => {
         navigation.navigate('Organise');
     };
 
-    // Sample image data
     const imagesData = [
         { id: '1', source: require('../assets/images/event2.png') },
         { id: '2', source: require('../assets/images/event2.png') },
@@ -70,8 +68,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 12,
         width: '90%',
-        marginLeft: 'auto', // Center horizontally
-        marginRight: 'auto', // Center horizontally
+        marginLeft: 'auto', 
+        marginRight: 'auto', 
         marginBottom: 30,
     },
 

@@ -16,7 +16,6 @@ const ProfileLocation = () => {
     };
 
     const handleSelectOnMapPress = () => {
-        // Navigate to the map screen
         navigation.navigate('MapScreen');
     };
 
@@ -43,7 +42,6 @@ const ProfileLocation = () => {
                             <Picker.Item label="Country" value=""  style={styles.input}/>
                             <Picker.Item label="United States" value="United States"  style={styles.input}/>
                             <Picker.Item label="Canada" value="Canada"  style={styles.input}/>
-                            {/* Add more country options here */}
                         </Picker>
                     </View>
 
@@ -57,7 +55,6 @@ const ProfileLocation = () => {
                             <Picker.Item label="State" value=""  style={styles.input}/>
                             <Picker.Item label="California" value="California"  style={styles.input}/>
                             <Picker.Item label="New York" value="New York"  style={styles.input}/>
-                            {/* Add more state options here */}
                         </Picker>
                     </View>
 
@@ -71,7 +68,6 @@ const ProfileLocation = () => {
                             <Picker.Item label="City" value=""  style={styles.input}/>
                             <Picker.Item label="Los Angeles" value="Los Angeles"  style={styles.input}/>
                             <Picker.Item label="New York City" value="New York City"  style={styles.input}/>
-                            {/* Add more city options here */}
                         </Picker>
                     </View>
                 </View>

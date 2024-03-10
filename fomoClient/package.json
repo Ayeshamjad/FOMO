@@ -29,6 +29,7 @@
     "react-native-gesture-handler": "~2.14.0",
     "react-native-image-picker": "^7.1.0",
     "react-native-maps": "^1.10.3",
+    "react-native-modal": "^13.0.1",
     "react-native-navigation-bar-color": "^2.0.2",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "^15.0.0",

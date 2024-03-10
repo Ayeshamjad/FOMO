@@ -8,7 +8,6 @@ import { Picker } from '@react-native-picker/picker';
 
 const addCard = () => {
     const handleContinuePress = () => {
-        // Navigate to the map screen
         navigation.navigate('reviewSummary');
     };
     const navigation = useNavigation();
@@ -85,8 +84,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 12,
         width: '90%',
-        marginLeft: 'auto', // Center horizontally
-        marginRight: 'auto', // Center horizontally
+        marginLeft: 'auto', 
+        marginRight: 'auto', 
         marginBottom: 30,
     },
     

@@ -71,8 +71,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 12,
         width: '90%',
-        marginLeft: 'auto', // Center horizontally
-        marginRight: 'auto', // Center horizontally
+        marginLeft: 'auto', 
+        marginRight: 'auto', 
     },
 
     signInButtonText: {

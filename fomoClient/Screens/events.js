@@ -4,29 +4,34 @@ import { Ionicons } from '@expo/vector-icons';
 import NavBar from '../components/NavBar';
 import { SvgXml } from 'react-native-svg';
 import { useNavigation } from '@react-navigation/native';
+import Modal from 'react-native-modal';
 
-// Sample data for events
 const eventsData = [
     {
         id: 1,
         name: "Mega Halloween party",
         location: "Miami, USA",
         dateTime: "18 jun, 2PM",
-        image: require('../assets/images/events.png') // Replace with actual image paths
+        image: require('../assets/images/events.png') 
     },
     {
         id: 2,
         name: "Music Night Party",
         location: "Miami, USA",
         dateTime: "18 jun, 2PM",
-        image: require('../assets/images/event2.png')// Replace with actual image paths
+        image: require('../assets/images/event2.png')
     },
-    // Add more event objects as needed
+
 ];
 
 export default function events() {
+
+    const [modalState, setModalState] = useState(false);
     const [value, onChangeText] = useState('');
     const navigation = useNavigation();
+
+    const [distance, setDistance] = useState(5); // Initial distance value
+    const [selectedCategories, setSelectedCategories] = useState([]);
 
     const [events, setEvents] = useState(eventsData);
 
@@ -44,6 +49,16 @@ export default function events() {
 
     const handleBackPress = () => {
         navigation.navigate('home');
+    };
+
+    const handleFilterModal = () =>{
+        setModalState(true);
+    };
+
+    const applyFilters = () => {
+        console.log('Selected categories:', selectedCategories);
+        console.log('Selected distance:', distance);
+        setModalState(false);
     };
 
     const renderItem = ({ item }) => (
@@ -104,7 +119,40 @@ export default function events() {
                         onChangeText={text => onChangeText(text)}
                         value={value}
                     />
-                    <Ionicons name="filter" size={24} color="gray" style={{ marginHorizontal: 10 }} />
+                    <Ionicons name="filter" size={24} color="gray" style={{ marginHorizontal: 10 }} onPress={handleFilterModal}/>
+                    <Modal isVisible={modalState} onBackdropPress={() => setModalState(false)}>
+                <View style={styles.modalContainer}>
+                    <Text style={styles.modalHeader}>Filter</Text>
+                    <View style={styles.sliderContainer}>
+                        <Text style={styles.sliderLabel}>Distance: {distance} km</Text>
+                        {/* <RangeSlider
+                            min={1}
+                            max={20}
+                            step={1}
+                            initialLowValue={distance}
+                            onValueChanged={(low, _) => setDistance(low)}
+                        /> */}
+                    </View>
+               
+                    <View style={styles.categoryContainer}>
+                        <Text style={styles.categoryLabel}>Categories:</Text>
+                        <TouchableOpacity
+                            style={[styles.categoryButton, selectedCategories.includes('Music') && styles.selectedCategoryButton]}
+                            onPress={() =>
+                                setSelectedCategories(prev => (prev.includes('Music') ? prev.filter(cat => cat !== 'Music') : [...prev, 'Music']))
+                            }>
+                            <Text style={styles.categoryButtonText}>Music</Text>
+                            <Text style={styles.categoryButtonText}>Concert</Text>
+                            <Text style={styles.categoryButtonText}>Drama</Text>
+                            <Text style={styles.categoryButtonText}>Workshops</Text>
+                        </TouchableOpacity>
+       
+                    </View>
+                    <TouchableOpacity style={styles.applyButton} onPress={applyFilters}>
+                        <Text style={styles.applyButtonText}>Apply</Text>
+                    </TouchableOpacity>
+                </View>
+            </Modal>
                 </View>
             </View>
 
@@ -219,5 +267,59 @@ const styles = StyleSheet.create({
     },
     icon: {
         marginRight: 5,
+    },
+
+    modalContainer: {
+        backgroundColor: 'white',
+        borderRadius: 10,
+        padding: 20,
+    },
+    modalHeader: {
+        fontFamily: 'Poppins-Bold',
+        fontSize: 20,
+        marginBottom: 10,
+    },
+    sliderContainer: {
+        marginBottom: 20,
+    },
+    sliderLabel: {
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        marginBottom: 5,
+    },
+    categoryContainer: {
+        marginBottom: 20,
+    },
+    categoryLabel: {
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        marginBottom: 5,
+    },
+    categoryButton: {
+        backgroundColor: '#E5E5E5',
+        borderRadius: 5,
+        paddingVertical: 8,
+        paddingHorizontal: 12,
+        marginRight: 10,
+    },
+    selectedCategoryButton: {
+        backgroundColor: '#FF6347',
+    },
+    categoryButtonText: {
+        fontFamily: 'Poppins',
+        fontSize: 14,
+        color: 'black',
+    },
+    applyButton: {
+        backgroundColor: '#FF6347',
+        borderRadius: 5,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        alignSelf: 'center',
+    },
+    applyButtonText: {
+        fontFamily: 'Poppins',
+        fontSize: 16,
+        color: 'white',
     },
 });

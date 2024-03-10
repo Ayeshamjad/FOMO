@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { View, Text, Button, FlatList, KeyboardAvoidingView, StyleSheet, TextInput, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { SvgXml } from 'react-native-svg';
@@ -98,8 +98,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 12,
         width: '90%',
-        marginLeft: 'auto', // Center horizontally
-        marginRight: 'auto', // Center horizontally
+        marginLeft: 'auto',
+        marginRight: 'auto',
     },
 
     signInButtonText: {
