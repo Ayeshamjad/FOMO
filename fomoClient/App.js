@@ -27,6 +27,8 @@ import payment from './Screens/payment';
 import addCard from './Screens/addCard';
 import reviewSummary from './Screens/reviewSummary';
 import OrganiseMap from './Screens/OrganiseMap';
+import ticket from './Screens/ticket';
+import paymentSuccess from './Screens/paymentSuccess';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +71,8 @@ const App = () => {
         <Stack.Screen name="addCard" component={addCard} />
         <Stack.Screen name="reviewSummary" component={reviewSummary} />
         <Stack.Screen name="OrganiseMap" component={OrganiseMap} />
+        <Stack.Screen name="paymentSuccess" component={paymentSuccess} />
+        <Stack.Screen name="ticket" component={ticket} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -28,9 +28,7 @@ const EventDetail = () => {
                 </View>
             </View>
 
-            {/* Main content of the screen goes here */}
-
-            {/* Bottom bar with chat icon and buy ticket button */}
+          
             <View style={styles.bottomBar}>
                 <Ionicons onPress={handleChatPress} name="chatbubble-ellipses-outline" size={30} color="#FF4459" style={{ marginHorizontal: 10 }} />
                 <TouchableOpacity style={styles.signInButton} onPress={handleBuyTicketPress}>

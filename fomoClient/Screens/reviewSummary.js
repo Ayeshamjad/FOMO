@@ -11,7 +11,7 @@ const reviewSummary = () => {
     };
 
     const handleContinuePress = () => {
-        navigation.navigate('organise2');
+        navigation.navigate('ticket');
     };
 
     const changeCardPress = () => {
