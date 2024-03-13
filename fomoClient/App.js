@@ -29,6 +29,20 @@ import reviewSummary from './Screens/reviewSummary';
 import OrganiseMap from './Screens/OrganiseMap';
 import ticket from './Screens/ticket';
 import paymentSuccess from './Screens/paymentSuccess';
+import myProfile from './Screens/myProfile';
+import editProfile from './Screens/editProfile';
+import settings from './Screens/settings';
+import dispute from './Screens/dispute';
+import support from './Screens/support';
+import scanTicket from './Screens/scanTicket';
+import myTickets from './Screens/myTickets';
+import soldTickets from './Screens/soldTickets';
+import showTicket from './Screens/showTicket';
+import eventDetail2 from './Screens/eventDetail2';
+import wallet from './Screens/wallet';
+import history from './Screens/history';
+import withdrawl from './Screens/withdrawl';
+import addBank from './Screens/addBank';
 
 const Stack = createStackNavigator();
 
@@ -46,7 +60,7 @@ const App = () => {
   return (
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName="home" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="myProfile" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomeScreen} /> 
         <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Signup" component={Signup} />
@@ -73,6 +87,20 @@ const App = () => {
         <Stack.Screen name="OrganiseMap" component={OrganiseMap} />
         <Stack.Screen name="paymentSuccess" component={paymentSuccess} />
         <Stack.Screen name="ticket" component={ticket} />
+        <Stack.Screen name="myProfile" component={myProfile} />
+        <Stack.Screen name="editProfile" component={editProfile} />
+        <Stack.Screen name="settings" component={settings} />
+        <Stack.Screen name="dispute" component={dispute} />
+        <Stack.Screen name="support" component={support} />
+        <Stack.Screen name="scanTicket" component={scanTicket} />
+        <Stack.Screen name="myTickets" component={myTickets} />
+        <Stack.Screen name="showTicket" component={showTicket} />
+        <Stack.Screen name="soldTickets" component={soldTickets} />
+        <Stack.Screen name="wallet" component={wallet} />
+        <Stack.Screen name="eventDetail2" component={eventDetail2} />
+        <Stack.Screen name="history" component={history} />
+        <Stack.Screen name="withdrawl" component={withdrawl} />
+        <Stack.Screen name="addBank" component={addBank} />
       </Stack.Navigator>
     </NavigationContainer>
   );

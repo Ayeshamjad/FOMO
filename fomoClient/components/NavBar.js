@@ -131,7 +131,7 @@ const NavBar = () => {
     };
   
     const handleProfilePress = () => {
-      // Logic for handling Profile press
+      navigation.navigate('myProfile');
     };
 
   return (
